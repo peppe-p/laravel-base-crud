@@ -10,8 +10,11 @@
             </div>
             <div>
                 <a href="{{ route('posts.edit', $post->id) }}"><input class="btn" type="button" value="Modifica"></a>
-                <a href="{{ route('posts.destroy', $post->id) }}"><input class="btn delete" type="button"
-                        value="Elimina"></a>
+                <form action="{{ route('posts.destroy', $post->id) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <input class="btn delete" type="submit" value="Elimina">
+                </form>
             </div>
         </div>
     </div>

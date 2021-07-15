@@ -26,5 +26,10 @@
 
             <input class="btn" type="submit" value="Conferma">
         </form>
+        <form action="{{ route('posts.destroy', $post->id) }}" method="post">
+            @csrf
+            @method('DELETE')
+            <input class="btn delete" type="submit" value="Elimina">
+        </form>
     </div>
 @endsection
