@@ -11,7 +11,7 @@
 
 <body>
     <h1>Home</h1>
-    <a href="{{ route('create') }}"><input type="button" value="Crea un nuovo post"></a>
+    <a href="{{ route('posts.create') }}"><input type="button" value="Crea un nuovo post"></a>
     @yield('content')
 </body>
 

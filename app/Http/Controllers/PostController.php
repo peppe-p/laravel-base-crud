@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('index', compact('posts'));
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('posts.create');
     }
 
     /**
@@ -41,7 +41,7 @@ class PostController extends Controller
         $newpost->author = $info_post['author'];
         $newpost->content = $info_post['content'];
         $newpost->save();
-        return redirect()->route('show', $newpost->id);
+        return redirect()->route('posts.show', $newpost->id);
     }
 
     /**
@@ -52,7 +52,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('show', compact('post'));
+        return view('posts.show', compact('post'));
     }
 
     /**

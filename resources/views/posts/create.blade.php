@@ -1,9 +1,9 @@
-@extends('home')
+@extends('structure')
 @section('title', 'Create Post')
 
 @section('content')
     <h1>Crea il tuo post</h1>
-    <form action="{{ route('store') }}" method="post">
+    <form action="{{ route('posts.store') }}" method="post">
         @csrf
         <label for="author">Autore</label>
         <input placeholder="Autore" type="text" name="author" id="author">

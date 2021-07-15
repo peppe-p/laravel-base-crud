@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\RouteUri;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,4 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', 'PostController');
+Route::get('/', 'PageController@home');
+Route::resource('posts', 'PostController');
