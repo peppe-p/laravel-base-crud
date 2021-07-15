@@ -17,7 +17,7 @@
                 <textarea placeholder="Contenuto" type="text" name="content" id="content"></textarea>
             </div>
 
-            <input type="submit" value="Crea Post">
+            <input class="btn" type="submit" value="Crea Post">
         </form>
     </div>
 @endsection
