@@ -16,6 +16,8 @@
                     <h5>{{ $post['author'] }}</h5>
                 </div>
                 <div>
+                    <a href="{{ route('posts.show', $post->id) }}"><input class="btn" type="button"
+                            value="Visualizza"></a>
                     <a href="{{ route('posts.edit', $post->id) }}"><input class="btn" type="button" value="Modifica"></a>
                 </div>
             </div>

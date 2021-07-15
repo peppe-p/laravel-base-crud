@@ -3,11 +3,16 @@
 
 @section('content')
     <div class="container">
-        <a href="{{ route('posts.edit', $post->id) }}"><input class="btn" type="button" value="Modifica"></a>
-        <a href="{{ route('posts.destroy', $post->id) }}"><input class="btn" type="button" value="Elimina"></a>
         <div class="post">
-            <h1>{{ $post['author'] }}</h1>
-            <p>{{ $post['content'] }}</p>
+            <div>
+                <h2>{{ $post['author'] }}</h2>
+                <p>{{ $post['content'] }}</p>
+            </div>
+            <div>
+                <a href="{{ route('posts.edit', $post->id) }}"><input class="btn" type="button" value="Modifica"></a>
+                <a href="{{ route('posts.destroy', $post->id) }}"><input class="btn delete" type="button"
+                        value="Elimina"></a>
+            </div>
         </div>
     </div>
 @endsection
