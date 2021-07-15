@@ -3,14 +3,21 @@
 
 @section('content')
     <h1>Crea il tuo post</h1>
-    <form action="{{ route('posts.store') }}" method="post">
-        @csrf
-        <label for="author">Autore</label>
-        <input placeholder="Autore" type="text" name="author" id="author">
-        <br>
-        <label for="content">Contenuto</label>
-        <input placeholder="Contenuto" type="text" name="content" id="content">
-        <br>
-        <input type="submit" value="Crea Post">
-    </form>
+    <div class="container">
+        <form action="{{ route('posts.store') }}" method="post">
+            @csrf
+            <div>
+                <label for="author">Autore</label>
+                <br>
+                <input placeholder="Autore" type="text" name="author" id="author">
+            </div>
+            <div>
+                <label for="content">Contenuto</label>
+                <br>
+                <textarea placeholder="Contenuto" type="text" name="content" id="content"></textarea>
+            </div>
+
+            <input type="submit" value="Crea Post">
+        </form>
+    </div>
 @endsection

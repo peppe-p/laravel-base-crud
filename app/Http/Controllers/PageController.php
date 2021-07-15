@@ -8,6 +8,6 @@ class PageController extends Controller
 {
     public function home()
     {
-        return view('structure');
+        return view('home');
     }
 }
